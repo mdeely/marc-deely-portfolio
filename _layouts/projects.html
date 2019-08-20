@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<body>
+    {% include nav.html %}
+    <ul class="projectsList">
+        {% for project in site.projects %}
+            <li class="projectItem">
+                <div class="projectItem__title">{{project.title}}</div>
+                <a href="{{project.url}}" class="projectItem__link" style="background-image: url('{{site.image_path}}{{project.slug}}/{{project.slug}}-thumb.png')">
+                    <!-- <img class="projectItem__image" src="{{site.image_path}}{{project.slug}}/{{project.slug}}-thumb.png" alt="{{page.title}} project"> -->
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>

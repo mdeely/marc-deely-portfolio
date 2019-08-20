@@ -1,0 +1,70 @@
+.projectsList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 16px;
+}
+
+.projectItem {
+    width: 25%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column-reverse;
+    @include projectItemAspectRatio(320, 400);
+
+    &:hover {
+        .projectItem__title {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+.projectItem__title {
+    z-index: 0;
+    text-align: center;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.875em;
+    // -webkit-transform: scale(0.98);
+    // -moz-transform: scale(0.98);
+    // -o-transform: scale(0.98);
+    // -ms-transform: scale(0.98);
+    // transform: scale(0.98);
+    // -webkit-transition: all 0.25s ease-in-out;
+    // -moz-transition: all 0.25s ease-in-out;
+    // -o-transition: all 0.25s ease-in-out;
+    // -ms-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: none;
+    opacity: 0;
+    transform: scale(.9);
+}
+
+.projectItem__link {
+    $projectBoxShadow: -5px 3px 26px -7px rgba(0,0,0,0.5), -27px 10px 59px rgba(0,0,0,0.2);
+    $projectBoxShadowHover: -5px 3px 28px -7px rgba(0,0,0,0.45), -27px 10px 64px rgba(0,0,0,0.15);
+    display: block;
+    box-shadow: $projectBoxShadow;
+    -moz-box-shadow: $projectBoxShadow;
+    -webkit-box-shadow: $projectBoxShadow;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: auto 100%;
+    background-position: center;
+    margin: 40px;
+    transition: all .2s ease-out, background-size .3s ease-out;
+
+    &:hover {
+        background-size: auto 120%;
+        transition: all .2s ease-out, background-size 14s ease-out;
+        transform: scale(1.015);
+        box-shadow: $projectBoxShadowHover;
+    }
+}

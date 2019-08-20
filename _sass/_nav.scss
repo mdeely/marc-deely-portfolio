@@ -1,0 +1,53 @@
+$navItemBoxShadow: -3px 3px 10px rgba(0,0,0,0.1), -10px 5px 29px rgba(0,0,0,0.1);
+
+@mixin navItemAnimation($duration) {
+    animation: hover $duration ease-in-out infinite;
+}
+
+nav {
+    height: 180px;
+    padding: 40px 8px;
+}
+
+.navList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navItem {
+    box-shadow: $navItemBoxShadow;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin: 8px 16px;
+    background-color: white;
+    @include navItemAnimation(32s);
+
+    &.logo {
+        width: 96px;
+        height: 96px;
+        margin-left: 2%;
+        margin-right: 2%;
+        @include navItemAnimation(20s);
+        animation-direction: alternate;
+    }
+
+    &:nth-child(1) {
+        @include navItemAnimation(40s);
+    }
+
+    &:nth-child(2) {
+        @include navItemAnimation(30s);
+        animation-direction: reverse;
+    }
+
+    &:nth-child(4) {
+        @include navItemAnimation(30s);
+        animation-direction: reverse;
+    }
+
+    &:nth-child(5) {
+        @include navItemAnimation(40s);
+    }
+}
