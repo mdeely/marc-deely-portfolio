@@ -1,6 +1,24 @@
 ---
 layout: default
 ---
+<div class="project__decoration" style="background-color: #{{page.accent_color}} "></div>
+
 <a href="/">Back</a>
-<h1>{{page.title}}</h1>
-<img src="{{site.image_path}}{{page.slug}}/{{page.slug}}-thumb.png"/>
+
+<div class="project__info">
+    <h1 class="project__title" style="color: #{{page.accent_color}}">{{page.title}}</h1>
+    <p class="project__description">{{page.description}}</p>
+</div>
+
+<section class="projects">
+    {% for item in page.items %}
+        {% if item.image.size > 0 %}
+            <figure>
+                <img src="{{site.image_path}}/{{page.slug}}/{{item.image}}" alt="{{page.title}}">
+                {% if item.caption.size > 0 %}
+                    <figcaption>{{item.caption}}</figcaption>
+                {% endif %}
+            </figure>
+        {% endif %}   
+    {% endfor %}
+</section>

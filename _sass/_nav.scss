@@ -16,12 +16,16 @@ nav {
 }
 
 .navItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: $navItemBoxShadow;
     width: 64px;
     height: 64px;
     border-radius: 50%;
     margin: 8px 16px;
     background-color: white;
+    text-align: center;
     @include navItemAnimation(32s);
 
     &.logo {
