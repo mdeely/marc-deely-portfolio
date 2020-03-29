@@ -8,7 +8,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http:/marcdeely.com" # the base hostname & protocol for your site, e.g. http://example.com
 instagram_username: marcusdeely 
 github_username:  mdeely
-image_path: "../assets/images/"
+image_path: "https://storage.googleapis.com/portfolio_images"
 
 collections:
   projects:

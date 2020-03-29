@@ -94,6 +94,6 @@
 @media screen and (max-width: 640px) {
     .projectItem__title {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(12px) scale(1);
     }
 }

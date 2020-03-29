@@ -8,7 +8,7 @@ layout: default
             {% if project.draft != true %}
                 <li class="projectItem" data-categories="{{project.categories}}">
                     <div class="projectItem__title">{{project.title}}</div>
-                    <a href="{{project.url}}" class="projectItem__link" style="background-image: url('{{site.image_path}}{{project.slug}}/{{project.slug}}-thumb.png')">
+                    <a href="{{project.url}}" class="projectItem__link" style="background-image: url('{{site.image_path}}/{{project.slug}}/{{project.slug}}-thumb.png')">
                     </a>
                 </li>
             {% endif %}
