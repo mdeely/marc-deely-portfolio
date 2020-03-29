@@ -18,6 +18,7 @@ nav {
 
     .navItem {
         width: $navSize;
+        min-width: $navSize;
         height: $navSize;
         padding: 16px;
         transition: box-shadow .15s ease-out;
@@ -152,7 +153,25 @@ nav {
 }
 
 @media screen and (max-width: 640px) {
+    $navSize: 44px; 
+    $logoSize: 64px;
+
     nav {
         position: relative;
+
+        .navItem {
+            width: $navSize;
+            min-width: $navSize;
+            height: $navSize;
+            padding: 12px;
+            margin: 2.5vw;
+
+            &.logo {
+                width: $logoSize;
+                min-width: $logoSize;
+                height: $logoSize;
+                padding: 16px;
+            }
+        }
     }
 }
