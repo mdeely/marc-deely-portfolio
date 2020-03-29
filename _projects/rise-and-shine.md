@@ -1,12 +1,13 @@
 ---
 title: "Rise & Shine"
 layout: "project"
-accent_color: "F4964E"
+accent_color: "#F4964E"
 categories: "ui graphics"
 description: "An alarm clock app that won't stop until you smile in to the camera."
 items:
 - image: "riseAndShine-hero.png"
   caption: "Designing this app was a lot of fun. It's concept is unique and beneficial to those who have a hard time waking up in a good mood. Studies show that being forced to smile in the morning makes your day 90% better. I made that up."
+  remove_shadow: true
 - image: "riseAndShine.png"
   caption: "Loading screen design. I wanted to create an illustration that captured the best parts of waking up; colors from the sun and the sky, the smell of grass, and the overall simplicity and aesthetics of nature."
 - image: "riseAndShine-1.png"

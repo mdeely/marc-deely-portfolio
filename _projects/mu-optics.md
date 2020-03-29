@@ -1,7 +1,7 @@
 ---
 title: "Mu Optics"
 layout: "project"
-accent_color: "580061"
+accent_color: "#580061"
 description: "Thermal imaging at consumer friendly prices."
 categories: "ui graphics"
 items:

@@ -1,7 +1,7 @@
 ---
 title: "Graphics"
 layout: "project"
-accent_color: "463857"
+accent_color: "#463857"
 categories: "graphics"
 description: "A collection of various graphic illustrations."
 items:

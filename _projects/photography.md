@@ -1,7 +1,7 @@
 ---
 title: "Photography"
 layout: "project"
-accent_color: "525252"
+accent_color: "#525252"
 draft: true
 items:
 - image: "5B2C9603"

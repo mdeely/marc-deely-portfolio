@@ -1,10 +1,12 @@
 ---
 layout: default
 ---
+{% assign remove_shadow = "style='box-shadow: none'" %}
+
 {% include nav.html %}
 <a href="/" class="back_button"><i class="fa fa-arrow-left"></i></a>
 <div class="project__info">
-    <h1 class="project__title" style="color: #{{page.accent_color}}">{{page.title}}</h1>
+    <h1 class="project__title" style="color: {{page.accent_color}}">{{page.title}}</h1>
     <p class="project__description">{{page.description}}</p>
 </div>
 
@@ -12,7 +14,7 @@ layout: default
     {% for item in page.items %}
         {% if item.image.size > 0 %}
             <figure class="project__item">
-                <img src="{{site.image_path}}/{{page.slug}}/{{item.image}}" alt="{{page.title}}">
+                <img src="{{site.image_path}}/{{page.slug}}/{{item.image}}" {% if item.remove_shadow %}{{remove_shadow}}{% endif %} alt="{{page.title}}">
                 {% if item.caption.size > 0 %}
                     <figcaption><p>{{item.caption}}</p></figcaption>
                 {% endif %}

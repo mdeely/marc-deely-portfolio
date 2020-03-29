@@ -1,7 +1,7 @@
 ---
 title: "Sqipp"
 layout: "project"
-accent_color: "B3291A"
+accent_color: "#B3291A"
 categories: "ui graphics"
 description: "A mobile app designed to allow a quick ordering experience for pickup"
 items:

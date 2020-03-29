@@ -1,7 +1,7 @@
 ---
 title: "Open Home Pro"
 layout: "project"
-accent_color: "2f9bdd"
+accent_color: "#2f9bdd"
 categories: "ui code"
 description: "A service that gives agents and brokers simple way to manage their leads, listings, and open houses."
 items:

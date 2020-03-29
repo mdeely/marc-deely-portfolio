@@ -1,7 +1,7 @@
 {% if page.url == "/" %}
     <nav class="home">
 {% else %}
-    <nav class="{{page.slug}}" style="background-color: #{{page.accent_color}}">
+    <nav class="{{page.slug}}" style="background-color: {{page.accent_color}}">
 {% endif %}
         <ul class="navList">
             <li class="navItem" data-category="ui" data-label="UI"><img src="{{site.image_path}}/ui-filter.png" alt=""></li>
@@ -16,5 +16,5 @@
             <li class="navItem" data-category="photography" data-label="Photos"><img src="{{site.image_path}}/photos.png" alt=""></li>
         </ul>
     </div>
-    <!-- <div class="project__decoration" style="background-color: #{{page.accent_color}}"></div> -->
+    <!-- <div class="project__decoration" style="background-color: {{page.accent_color}}"></div> -->
 </nav>

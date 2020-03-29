@@ -2,7 +2,7 @@
 title: "Moving Company Reviews"
 description: "A site that provides verified user reviews for moving companies."
 layout: "project"
-accent_color: "99b942"
+accent_color: "#99b942"
 categories: "ui graphics"
 items:
 - image: "mcr-hero.png"

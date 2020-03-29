@@ -1,12 +1,13 @@
 ---
 title: "Flyleaf"
 layout: "project"
-accent_color: "111111"
+accent_color: "#111111"
 categories: "code graphics"
 description: "A service aimed at distributing paper copies of short stories from emerging authors"
 items:
 - image: "flyleaf-hero.png"
   caption: "My initial task was to create a logo and color scheme for Flyleaf which later evolved in to designing, coding, and launching their website."
+  remove_shadow: true
 - image: "flyleaf-notebook.png"
   caption: "Initial sketching phase."
 - image: "flyleaf-logos.png"
