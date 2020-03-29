@@ -2,8 +2,8 @@ title: Marc Deely Portfolio
 email: themarcusdeely@gmail.com
 description: "Portfolio site for Marc Deely."
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https:/marcdeely.com" # the base hostname & protocol for your site, e.g. http://example.com
-hosturl: "https:/marcdeely.com"
+url: "https://www.marcdeely.com/" # the base hostname & protocol for your site, e.g. http://example.com
+hosturl: "https://www.marcdeely.com/"
 instagram_username: marcusdeely 
 github_username:  mdeely
 image_path: "https://storage.googleapis.com/portfolio_images"
