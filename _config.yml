@@ -1,14 +1,14 @@
 title: Marc Deely Portfolio
 email: themarcusdeely@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: "Portfolio site for Marc Deely."
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http:/marcdeely.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https:/marcdeely.com" # the base hostname & protocol for your site, e.g. http://example.com
+hosturl: "https:/marcdeely.com"
 instagram_username: marcusdeely 
 github_username:  mdeely
 image_path: "https://storage.googleapis.com/portfolio_images"
+ogImage: "logo_1200.png"
+ogImageAlt: "Marc Deely's Portfolio"
 
 collections:
   projects:
