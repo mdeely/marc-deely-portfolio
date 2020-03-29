@@ -1,9 +1,59 @@
+.project__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+}
+
+.project__item {
+    max-width: 500px;
+    margin-bottom: 80px;;
+
+    img {
+        border-radius: 4px;
+        box-shadow: 0 2px 20px rgba(black, .1), 0 1px 10px rgba(black, .1);
+    }
+
+    figcaption {
+        max-width: 50ch;
+        color: rgba(black, .5);
+        margin: 16px auto;
+        text-align: center;
+    }
+}
+
+.back_button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    position: absolute; 
+    top: 16px + 48px;
+    left: 48px;
+    font-size: 24px;
+    color: $link;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        color: darken($link, 10%);
+        background-color: lighten($link, 15%);
+        transition: all .1s ease-in-out;
+    }
+
+    &:active {
+        background-color: rgba($link, .45);
+        transition: all .0s ease-in-out;
+    }
+}
+
 .project__decoration {
     height: 0px;
     position: relative;
     z-index: 0;
     overflow: hidden;
-    padding: 8px;
+    padding: 1px;
 
     &:before {
       content: '';
@@ -13,11 +63,12 @@
       left: 0px;
       right: 0px;
       bottom: 0px;
-      border-color: rgba(255, 255, 255, 0) rgba(white, .2);
+      border-color: rgba(255, 255, 255, 0) rgba(white, .25);
       border-style: solid;
-      border-width: 10px 100vw 0px 0px;
+      border-width: 30px 100vw 0px 0px;
       margin-top: 0px;
       z-index: 20;
+      animation: decoration 4s linear alternate infinite;
     }
 
     &:after {
@@ -30,31 +81,50 @@
         width: 0;
         height: 0;
         bottom: 0;
-        border-color: rgba(255, 255, 255, 0) rgba(white, .2);
+        border-color: rgba(255, 255, 255, 0) rgba(white, .55);
         border-style: solid;
         border-width: 400px 0 0 0;
         border-left-width: 100vw;
-        border-top-width: 10px;
+        border-top-width: 40px;
         margin-top: 0px;
+        animation: decoration 2s ease-in-out alternate infinite;
     }
 }
 
 .project__info {
     max-width: 800px;
-    padding: 0 32px;
+    padding: 24px 32px;
     margin: 48px auto;
     text-align: center;
 }
 
 .project__title {
-    font-size: 4vw;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-weight: 900;
+    font-size: 32px;
     word-break: break-word;
-    text-indent: 6px;
+    position: relative;
+    margin: 0 auto 28px auto;
+    width: 70%;
+    text-align: center;
+
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     height: 70%;
+    //     width: 1px;
+    //     top: 0;
+    //     left: 0;
+    //     bottom: 0;
+    //     background-color: transparent;
+    //     margin-top: auto;
+    //     margin-bottom: auto;
+    // }
 }
 
 .project__description {
     margin-top: 16px;
+    font-size: 18px;
+    color: rgba(black, .5);
+    max-width: 40ch;
+    margin-left: auto;
+    margin-right: auto;
 }

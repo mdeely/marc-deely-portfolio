@@ -1,40 +1,133 @@
 $navItemBoxShadow: -3px 3px 10px rgba(0,0,0,0.1), -10px 5px 29px rgba(0,0,0,0.1);
+$navSize: 64px; 
+$logoSize: 96px;
 
 @mixin navItemAnimation($duration) {
     animation: hover $duration ease-in-out infinite;
 }
 
 nav {
-    height: 180px;
+    position: relative;
+    position: relative;
+    box-shadow: none;
     padding: 40px 8px;
+
+    .navList {
+        justify-content: center;
+    }
+
+    .navItem {
+        width: $navSize;
+        height: $navSize;
+        padding: 16px;
+        transition: box-shadow .15s ease-out;
+        cursor: pointer;
+
+        &.active {
+            border: 1px solid $link;
+            box-shadow: 0 0 0 2px #92c3ff, 1px 1px 2px rgba(0,0,0,0.2), -2px 2px 9px rgba(0,0,0,0.2);
+        }
+
+        > *  {
+            pointer-events: none;
+        }
+
+        &:hover:before {
+            opacity: 1;
+            bottom: -28px;
+            transition: all .2s ease-in-out;
+        }
+
+        &:before {
+            content: attr(data-label);
+            padding: 4px;
+            color: #666;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            position: absolute;
+            left: -50%;
+            right: -50%;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 12px;
+            opacity: 0;
+            bottom: 0;
+        }
+    }
+
+    .navItem.logo {
+        width: $logoSize;
+        height: $logoSize;
+        padding: 20px;
+        // animation: none;
+        transform-origin: center;
+        transition: transform .1s ease-in-out;
+        @include navItemAnimation(20s);
+
+        &:hover {
+            transform: scale(1.08);
+        }
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        height: 0px;
+        width: 0px;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        border-style: solid;
+        margin-top: 0px;
+    }
+
+    &:before {
+        border-width: 10px 100vw 0px 0px;
+        border-color: rgba(255,255,255,0) rgba(255,255,255,0.2);
+    }
+
+    &:after {
+        border-width: 400px 0 0 0;
+        border-left-width: 100vw;
+        border-top-width: 10px;
+        border-color: rgba(255,255,255,0) rgba(255,255,255,0.25);
+
+    }
+
+    &:not(.home) {
+        height: 16px;
+        padding: 0;
+
+        .navList {
+            display: none;
+        }
+    }
 }
 
 .navList {
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex: 1;
 }
 
 .navItem {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: $navItemBoxShadow;
-    width: 64px;
-    height: 64px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    margin: 8px 16px;
-    background-color: white;
+    margin: 16px;
     text-align: center;
-    @include navItemAnimation(32s);
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: -3px 3px 10px rgba(0,0,0,0.1), -10px 5px 29px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    &.logo {
-        width: 96px;
-        height: 96px;
-        margin-left: 2%;
-        margin-right: 2%;
-        @include navItemAnimation(20s);
-        animation-direction: alternate;
+    a {
+        display: block;
+        width: 100%;
+        height: auto;
     }
 
     &:nth-child(1) {
@@ -44,14 +137,22 @@ nav {
     &:nth-child(2) {
         @include navItemAnimation(30s);
         animation-direction: reverse;
+        animation-delay: -2s;
     }
 
     &:nth-child(4) {
-        @include navItemAnimation(30s);
-        animation-direction: reverse;
+        @include navItemAnimation(34s);
     }
 
     &:nth-child(5) {
-        @include navItemAnimation(40s);
+        @include navItemAnimation(42s);
+        animation-direction: reverse;
+        animation-delay: -2s;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    nav {
+        position: relative;
     }
 }

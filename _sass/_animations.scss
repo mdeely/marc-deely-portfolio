@@ -6,3 +6,11 @@
     80%  { transform: translate(-5px,-8px); }
     100% { transform: translate(0px,0px); }
 }
+
+@keyframes decoration {
+    0%   { border-top-width: 12px }
+    25%   { border-top-width: 4px }
+    50%  { border-top-width: 2px }
+    75%  { border-top-width: 0px }
+    100% { border-top-width: 12px }
+}

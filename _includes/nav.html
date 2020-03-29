@@ -1,9 +1,20 @@
-<nav>
-    <ul class="navList">
-        <li class="navItem">UI Design</li>
-        <li class="navItem">Graphic Design</li>
-        <li class="navItem logo">Logo</li>
-        <li class="navItem">Code</li>
-        <li class="navItem">Photography</li>
-    </ul>
+{% if page.url == "/" %}
+    <nav class="home">
+{% else %}
+    <nav class="{{page.slug}}" style="background-color: #{{page.accent_color}}">
+{% endif %}
+        <ul class="navList">
+            <li class="navItem" data-category="ui" data-label="UI"><img src="/assets/images/ui-filter.png" alt=""></li>
+            <li class="navItem" data-category="graphics"data-label="Graphics"><img src="/assets/images/design-filter.png" alt=""></li>
+            <li class="navItem logo">
+                <a href="/">
+                    {% include /logo.svg %}
+                </a>
+            </li>
+            <!-- <h1 class="project__title">{{page.title}}</h1> -->
+            <li class="navItem" data-category="code" data-label="Code"><img src="/assets/images/code-filter.png" alt=""></li>
+            <li class="navItem" data-category="photography" data-label="Photos"><img src="/assets/images/photos.png" alt=""></li>
+        </ul>
+    </div>
+    <!-- <div class="project__decoration" style="background-color: #{{page.accent_color}}"></div> -->
 </nav>

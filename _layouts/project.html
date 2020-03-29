@@ -1,22 +1,20 @@
 ---
 layout: default
 ---
-<div class="project__decoration" style="background-color: #{{page.accent_color}} "></div>
-
-<a href="/">Back</a>
-
+{% include nav.html %}
+<a href="/" class="back_button"><i class="fa fa-arrow-left"></i></a>
 <div class="project__info">
     <h1 class="project__title" style="color: #{{page.accent_color}}">{{page.title}}</h1>
     <p class="project__description">{{page.description}}</p>
 </div>
 
-<section class="projects">
+<section class="project__list">
     {% for item in page.items %}
         {% if item.image.size > 0 %}
-            <figure>
+            <figure class="project__item">
                 <img src="{{site.image_path}}/{{page.slug}}/{{item.image}}" alt="{{page.title}}">
                 {% if item.caption.size > 0 %}
-                    <figcaption>{{item.caption}}</figcaption>
+                    <figcaption><p>{{item.caption}}</p></figcaption>
                 {% endif %}
             </figure>
         {% endif %}   
