@@ -128,3 +128,10 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+@media screen and (max-width: 640px) {
+    .back_button {
+        top: 32px;
+        left: 16px;
+    }
+}
