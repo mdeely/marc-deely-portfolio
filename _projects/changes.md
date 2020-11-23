@@ -1,6 +1,6 @@
 ---
 title: "Changes"
-description: "Coming soon"
+description: "An iOS app that visually tracks the imporant changes throughout your life. Coming soon!"
 layout: "project"
 accent_color: "#6D6ACB"
 categories: "ui graphics"
