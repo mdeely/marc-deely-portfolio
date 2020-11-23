@@ -20,7 +20,7 @@ items:
 - image: "email_welcome.png"
   caption: 'An email redesign that brought more validation to the emails through brand alignment and modern aesthetics.' 
 - image: "albert_logo.png"
-  caption: "The items above touch on a small percetange of my contirbutions to Albert. If you'd like to learn more, feel free to contact me!"
+  caption: "The items above touch on a extremely small percentage of my contirbutions to Albert. If you'd like to learn more, feel free to contact me!"
   remove_shadow: true
 # - image: "albert_thumb.png"
 #   caption: 'The items above touch on a small percetange of my contirbutions to Albert. If you'd like to learn more, feel free to contact me.' 
