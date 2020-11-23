@@ -4,10 +4,6 @@ const graphicsProject = document.querySelectorAll('[data-categories*="graphics"]
 const codeProject = document.querySelectorAll('[data-categories*="code"]')
 const projectstList = document.querySelector(".projectsList");
 
-console.log(uiProject);
-console.log(graphicsProject);
-console.log(codeProject);
-
 filterTriggers.forEach(filterTrigger => {
     filterTrigger.addEventListener('click', (e) => {
         e.preventDefault();

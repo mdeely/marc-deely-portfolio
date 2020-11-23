@@ -32,7 +32,7 @@
     &:hover {
         .projectItem__title {
             opacity: 1;
-            transform: translateY(12px) scale(1);
+            transform: translateY(8px) scale(1);
         }
     }
 
@@ -48,7 +48,7 @@
     color: #555;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 0.875em;
+    font-size: 0.8125em;
     // -webkit-transform: scale(0.98);
     // -moz-transform: scale(0.98);
     // -o-transform: scale(0.98);
@@ -65,8 +65,8 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     text-decoration: none;
-    opacity: 0;
-    transform: translateY(40px) scale(.9);
+    opacity: .64;
+    transform: translateY(12px) scale(.9);
 }
 
 .projectItem__link {
@@ -89,6 +89,15 @@
         transform: scale(1.015);
         box-shadow: $projectBoxShadowHover;
     }
+}
+
+.statement {
+    width: clamp(50%, 100%, 15ch);
+    margin: 24px auto 80px auto;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1.5;   
 }
 
 @media screen and (max-width: 640px) {
